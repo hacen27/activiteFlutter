@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tpflutter/screenThere.dart';
 
 class SreenTwo extends StatefulWidget {
   const SreenTwo({super.key});
@@ -66,22 +67,26 @@ class _SreenTwoState extends State<SreenTwo> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(height: 10),
             CircleAvatar(
-                backgroundColor: Color.fromARGB(255, 120, 163, 236),
-                child: Image.asset('assets/fm.jpg', height: 100, width: 80),
-                radius: 70),
+              backgroundImage: NetworkImage(
+                'https://th.bing.com/th/id/OIP.HAc-sPE8y5CoQq-NUlN0xwAAAA?pid=ImgDet&rs=1',
+              ),
+              radius: 50.0,
+            ),
             SizedBox(height: 10),
             Text("Utilisateur de L'application"),
-            SizedBox(height: 30),
+            SizedBox(height: 15),
             textLine('Element  ', '                           Nombre'),
-            SizedBox(height: 30),
+            SizedBox(height: 15),
             textLine2('Rendez-vous ', '                          1'),
-            SizedBox(height: 30),
+            SizedBox(height: 15),
             textLine2('Rendez-vous ', '                          2'),
-            SizedBox(height: 30),
+            SizedBox(height: 15),
             textLine2('Rendez-vous ', '                          4'),
-            SizedBox(height: 30),
+            SizedBox(height: 15),
             textLine2('Rendez-vous ', '                          5'),
+            SizedBox(height: 30),
             Row(
               children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -113,12 +118,26 @@ class _SreenTwoState extends State<SreenTwo> {
                       height: 70,
                       width: 70,
                     ),
-                    Container(
-                      width: 50,
-                      height: 30,
-                      color: Colors.blue,
-                      child: Text('Envoyer',
-                          style: TextStyle(fontSize: 17, color: Colors.white)),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ScreenThere(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 60,
+                        height: 30,
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(4)),
+                        child: Text('Envoyer',
+                            style:
+                                TextStyle(fontSize: 14, color: Colors.white)),
+                      ),
                     ),
                   ],
                 ),
@@ -126,14 +145,17 @@ class _SreenTwoState extends State<SreenTwo> {
                 Column(
                   children: [
                     Text("CLINIC",
-                        style: TextStyle(fontSize: 17, color: Colors.black)),
+                        style: TextStyle(fontSize: 14, color: Colors.black)),
                     SizedBox(height: 20),
                     Container(
-                      width: 50,
+                      alignment: Alignment.center,
+                      width: 60,
                       height: 30,
-                      color: Colors.blue,
                       child: Text('Annuler',
-                          style: TextStyle(fontSize: 17, color: Colors.white)),
+                          style: TextStyle(fontSize: 14, color: Colors.white)),
+                      decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(4)),
                     ),
                   ],
                 ),
