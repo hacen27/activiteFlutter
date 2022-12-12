@@ -35,7 +35,7 @@ class ScreenThere extends StatelessWidget {
                   color: Color.fromARGB(255, 66, 134, 223),
                   borderRadius: BorderRadius.circular(10)),
               child: Text(
-                "ocsdocosdpcjosdcjsdocjaASas\nsdfbjhdjhhwddwdwddf\nsdfsdfsdfsdfdasdjbAAAsDJ\nASDGUGASASDASsBD",
+                "MODULE DEVELLOPEMENT MOBILE\n2022 - 2023\nM2 Master Systeme Information\nMI 001",
                 style: TextStyle(color: Colors.white),
               ),
             ),

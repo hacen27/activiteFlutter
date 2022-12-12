@@ -54,19 +54,23 @@ class _ScreenFourState extends State<ScreenFour> {
                   ])),
             ),
             ListTile(
-              title: Text('Home'),
+              leading: Icon(Icons.home),
+              title: Text('Accueil'),
               onTap: () {},
             ),
             ListTile(
-              title: Text('Profile'),
+              leading: Icon(Icons.inbox_outlined),
+              title: Text('Boite de Reception'),
               onTap: () {},
             ),
             ListTile(
-              title: Text('Setting'),
+              leading: Icon(Icons.contact_page_outlined),
+              title: Text('Contacts'),
               onTap: () {},
             ),
             ListTile(
-              title: Text('Logout'),
+              leading: Icon(Icons.calendar_today_outlined),
+              title: Text('Calendrier'),
               onTap: () {},
             ),
           ],
